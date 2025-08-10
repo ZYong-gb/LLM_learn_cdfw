@@ -1,0 +1,36 @@
+; 创建 .gitignore 文件，排除不需要上传的文件（如编译文件、临时文件等）
+; 创建文件：在项目根目录创建 .gitignore 文件
+; 语法规则：
+; # 开头为注释
+; / 结尾表示目录
+; * 表示通配符
+; ! 表示取反（强制包含）
+
+
+git init
+eval "$(ssh-agent -s)"
+ssh-add ~/user_key/zy_github_key
+password:zy1314520..
+
+git config user.email "1603664660@qq.com"
+git config user.name "ZYong-gb"
+
+git remote add origin git@github.com:ZYong-gb/LLM_learn_cdfw.git
+
+git add .
+git commit -m "first commit"
+
+git branch -M main
+
+git push -u origin main
+
+git pull origin main
+
+
+第一步：获取公网 IP 地址
+查看公网ip：curl ifconfig.me
+输出：183.221.0.158
+
+
+
+

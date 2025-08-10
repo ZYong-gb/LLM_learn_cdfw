@@ -1,0 +1,1 @@
+run sh: `/opt/conda/envs/env_zy_swift/bin/python3.11 /opt/conda/envs/env_zy_swift/lib/python3.11/site-packages/swift/cli/infer.py --adapters /home/zy/data_zy_project/data_zy_0726/model/qwen3_8b_swift/v4-20250731-231531/checkpoint-33 --infer_backend pt --temperature 0 --max_new_tokens 2048 --load_data_args true --val_dataset 1`

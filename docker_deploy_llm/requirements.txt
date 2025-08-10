@@ -1,0 +1,6 @@
+# conda create --name env_zy_swift python=3.11
+# pip install -r requirements.txt -U -i https://pypi.tuna.tsinghua.edu.cn/simple
+# -U 表示升级到指定版本的安装包
+
+
+vllm>=0.5.1
