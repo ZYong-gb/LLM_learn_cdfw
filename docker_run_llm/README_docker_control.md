@@ -1,5 +1,8 @@
 
 
+# 使用 docker run 直接运行 LLM 的 api
+# 镜像使用的是 vllm/vllm-openai:latest
+
 # 进入容器
 docker exec -it c9cd47a218f6 bash
 docker exec -it c9cd47a218f6 /bin/sh
