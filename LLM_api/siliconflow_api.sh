@@ -23,4 +23,4 @@ curl --request POST \
   ]
 }'
 
-# 东来api
+# 东来api,访问硅基流动上的deepseek模型的 api
