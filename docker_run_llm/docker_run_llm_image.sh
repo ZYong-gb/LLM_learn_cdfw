@@ -16,3 +16,4 @@ docker run --runtime nvidia --gpus '"device=2"' \
     vllm/vllm-openai:latest \
     --model /root/model/Qwen/Qwen3-8B \
     --gpu-memory-utilization 0.9  
+

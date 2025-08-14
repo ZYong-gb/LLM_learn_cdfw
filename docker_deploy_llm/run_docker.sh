@@ -16,13 +16,26 @@
 # 构建镜像（带缓存清理）
 # docker build --no-cache -t qwen3-32b-server-zy .
 
+
 # 运行容器
 # Path to your model files (change this to your actual model path)
-MODEL_PATH="/home/zy/data_zy_project/data_zy_0726/model/Qwen/Qwen3-32B"
+# MODEL_PATH="/home/zy/data_zy_project/data_zy_0726/model/Qwen/Qwen3-32B"
 
 # Run the container with GPU access and volume mount for the model
-docker run --runtime nvidia --gpus all \
-    --name zy_vllm_container1  \
-    -v $MODEL_PATH:/app/model \
-    -p 8000:8000 \
-    qwen3-32b-server-zy
+# docker run --runtime nvidia --gpus all \
+#     --name zy_vllm_container1  \
+#     -v $MODEL_PATH:/app/model \
+#     -p 8000:8000 \
+#     qwen3-32b-server-zy
+
+
+
+docker run -d --gpus all \
+    -p 8001:8000 \
+    -v /home/zy/data_zy_project/data_zy_0726/model/Qwen/Qwen3-8B:/app/model \
+    -e MODEL_PATH=/app/model \
+    -e TENSOR_PARALLEL_SIZE=4 \
+    -e GPU_MEMORY_UTILIZATION=0.9 \
+    --name vllm-container \
+    vllm-server-test
+
