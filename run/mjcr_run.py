@@ -3,8 +3,8 @@ from diffsynth import ModelManager, FluxImagePipeline
 
 
 # 下载模型
-model_path1 = "/home/ubuntu/Desktop/data_zy_0726/model/MusePublic/489_ckpt_FLUX_1"
-model_path2 = "/home/ubuntu/Desktop/data_zy_0726/model/MAILAND/majicflus_v1"
+model_path1 = "/home/zy/data_zy_project/data_zy_0726/model/MusePublic/489_ckpt_FLUX_1"
+model_path2 = "/home/zy/data_zy_project/data_zy_0726/model/MAILAND/majicflus_v1"
 
 
 # 设置推理计算精度为 bfloat16
@@ -37,7 +37,7 @@ number = int(number)
 while temp<=number:
     prompt = input("请输入生成图片的提示词：\n")
     image = pipe(prompt, seed=0)
-    image.save(f"../images/two_model_image_{temp}.png")
+    image.save(f"/home/zy/data_zy_project/data_zy_0726/LLM_learn_cdfw/images/two_model_image_{temp}.png")
     print(f"第 {temp} 张图片生成完成。")
     temp += 1
 

@@ -1,7 +1,7 @@
 import torch
 from modelscope import FluxPipeline
 
-model_path = "/home/ubuntu/Desktop/data_zy_0726/model/MusePublic/489_ckpt_FLUX_1"
+model_path = "/home/zy/data_zy_project/data_zy_0726/model/MusePublic/489_ckpt_FLUX_1"
 
 pipe = FluxPipeline.from_pretrained(model_path,
         torch_dtype=torch.bfloat16,
