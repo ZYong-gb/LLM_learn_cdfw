@@ -10,7 +10,7 @@
 git init
 eval "$(ssh-agent -s)"
 ssh-add ~/user_key/zy_github_key
-password:zy1314520..
+password:
 
 git config user.email "1603664660@qq.com"
 git config user.name "ZYong-gb"
